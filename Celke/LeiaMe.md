@@ -104,7 +104,9 @@ Ainda sem entender o erro ,  var_dump($_REQUEST); obendo a seguinte array de res
 Esta segunda situacao era por que eu buscava 4 colunas e mandava apresentar 5  . por isto do erro.
 
 Sem resultado positivo para ordenação por tabela. 
+
 Resultado positivo para mostrar informações do banco. 
+
 Resultado positivo para a busca na tabela. 
 
 ![image](https://user-images.githubusercontent.com/1613816/163730211-6746569e-35c2-483b-840c-1d4c5bb206e9.png)
