@@ -60,6 +60,48 @@ Clicando no nome do fonte  consigo ver a resposta do Json
 
 ![image](https://user-images.githubusercontent.com/1613816/163724476-3157ee99-cdf7-4096-a146-2b0363697643.png)
 
+Ainda sem entender o erro ,  var_dump($_REQUEST); obendo a seguinte array de resposta:
+
+    array(5) { 
+        ["draw"]=> string(1) "1"
+        ["columns"]=> array(6) { 
+            [0]=> array(5) { 
+                ["data"]=> string(1) "0" ["name"]=> string(0) "" ["searchable"]=> string(4) "true" ["orderable"]=> string(4) "true" 
+                ["search"]=> array(2) { ["value"]=> string(0) "" ["regex"]=> string(5) "false" } 
+            } 
+            [1]=> array(5) { 
+                ["data"]=> string(1) "1" ["name"]=> string(0) "" ["searchable"]=> string(4) "true" ["orderable"]=> string(4) "true" 
+                ["search"]=> array(2) { ["value"]=> string(0) "" ["regex"]=> string(5) "false" } 
+            } 
+            [2]=> array(5) {
+                ["data"]=> string(1) "2" ["name"]=> string(0) "" ["searchable"]=> string(4) "true" ["orderable"]=> string(4) "true" 
+                ["search"]=> array(2) { ["value"]=> string(0) "" ["regex"]=> string(5) "false" }
+            } 
+            [3]=> array(5) { ["data"]=> string(1) "3" ["name"]=> string(0) "" ["searchable"]=> string(4) "true" ["orderable"]=> string(4) "true" 
+            ["search"]=> array(2) { ["value"]=> string(0) "" ["regex"]=> string(5) "false" }
+            } 
+            [4]=> array(5) { ["data"]=> string(1) "4" ["name"]=> string(0) "" ["searchable"]=> string(4) "true" ["orderable"]=> string(4) "true" 
+            ["search"]=> array(2) { ["value"]=> string(0) "" ["regex"]=> string(5) "false" } 
+            }
+            [5]=> array(5) { 
+                ["data"]=> string(1) "5" ["name"]=> string(0) "" ["searchable"]=> string(4) "true" ["orderable"]=> string(4) "true" 
+                ["search"]=> array(2) { ["value"]=> string(0) "" ["regex"]=> string(5) "false" } 
+            } 
+       } 
+       ["start"]=> string(1) "0" 
+       ["length"]=> string(2) "10" 
+       ["search"]=> array(2) { ["value"]=> string(0) "" ["regex"]=> string(5) "false" } }
+       
+ 
+ A busca não responde por ORDER,  nem por ORDERABLE,  nem por DATA
+ 
+ Retirando a busca do sistema. Nova resposta de erro:
+ 
+     DataTables warning: table id=listar-cargos - Requested unknown parameter '5' for row 0, column 5. 
+        For more information about this error, please see http://datatables.net/tn/4
+
+
+Esta segunda situacao era por que eu buscava 4 colunas e mandava apresentar 5  . por isto do erro.
 
 
 
