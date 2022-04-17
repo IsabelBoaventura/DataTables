@@ -16,8 +16,8 @@
 	try {
 		$conn = new PDO('mysql:host='.$local.';dbname='.$database , $user , $password );
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		//
-			echo ' <br> Sou a conexao com a banco: '.$database.'<br>';
+		
+			// echo ' <br> Sou a conexao com a banco: '.$database.'<br>';
 		
 		/*$sql = "SELECT * FROM conv_produto";
 		$result = $conn->query( $sql );
