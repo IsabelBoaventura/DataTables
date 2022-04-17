@@ -36,5 +36,33 @@ Agora para acessar pelo banco de dados iremos ir em:
                 PRIMARY KEY (`id`) USING BTREE
             )COLLATE='utf8_unicode_ci'
             ENGINE=InnoDB;
+            
+            
+   
+## Erros
+
+Na primeira apresentação do resultado teve este aviso:
+
+    DataTables warning: table id=listar-cargos - Invalid JSON response. For more information about this error, please see http://datatables.net/tn/1
+
+Procurando na internet este aviso informa que teve algum erro na informação que o json esperava. 
+Para descobrir o que que estava de errado no Json, na internet informa para ir:
+
+    - botão direito do mouse
+    - inspecionar elemento 
+    - Network
+    - Fetch/XHR
+Nesta opção irá abrir o nome do arquvo de onde vem a informação  
+
+![image](https://user-images.githubusercontent.com/1613816/163724422-c8249ba7-af05-4a27-8a46-fedf7788e4d8.png)
+
+Clicando no nome do fonte  consigo ver a resposta do Json 
+
+![image](https://user-images.githubusercontent.com/1613816/163724476-3157ee99-cdf7-4096-a146-2b0363697643.png)
+
+
+
+
+
 
 
