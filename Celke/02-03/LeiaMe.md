@@ -67,5 +67,11 @@ Finalizado e Funcionando!
 
 ### Video 03: Como Pesquisar com DataTables e PHP
 
-- Mostrar e realizar a pesquisa;
-- Fazer a paginação conforme o resultado da pesquisa 
+- Mostrar e realizar a pesquisa ( Concluido);
+- Fazer a paginação conforme o resultado da pesquisa ( concluido );
+
+![image](https://user-images.githubusercontent.com/1613816/163742655-58619b3d-6175-4213-a3e0-5f4b337c50b8.png)
+
+Finalizado e Concluoido!
+
+
