@@ -85,4 +85,8 @@ Na Documentação de DataTables há o plugin para traduzir
         "url": "//cdn.datatables.net/plug-ins/1.11.5/i18n/pt-BR.json"
     }
 
+
+![image](https://user-images.githubusercontent.com/1613816/164565718-06326e8f-fb89-49a5-a340-cbfbe90407b8.png)
+
+
 Com isto a página apresentada esta em Portugues.
