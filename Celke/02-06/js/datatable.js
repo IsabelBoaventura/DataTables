@@ -15,6 +15,10 @@ $(document).ready(function() {
 
 
 const formNewCargo = document.getElementById("form-cad-cargo");
+
+//para fechar a janela modal 
+//const fecharModalCad = new bootstrap.Modal(document.getElementById("cadCargoModal"));
+//const fecharModalCad = new Modal(document.getElementById("cadCargoModal"));
 if( formNewCargo ){
     formNewCargo.addEventListener("submit", async(e) => {
         e.preventDefault();
@@ -38,7 +42,25 @@ if( formNewCargo ){
         //apresenta na tela a resposta 
 
         const resposta = await dados.json();
-        console.log( resposta) ;
+        //console.log( resposta) ;
+
+
+        ////apresentação da mensagem na tela
+        if( resposta['status']){
+            document.getElementById("msgAlertErroCad").innerHTML = "";
+            document.getElementById("msgAlerta").innerHTML = resposta['msg'];
+            formNewCargo.reset();
+            // fecharModalCad.hide();
+            $('#cadCargoModal').modal('hide');
+            listarDataTables = $('#listar-cargos').DataTable();
+           // listarDataTables.draw();
+           listarDataTables.draw(1);
+
+
+
+        }else{
+            document.getElementById("msgAlertErroCad").innerHTML = resposta['msg'];
+        }
 
 
 

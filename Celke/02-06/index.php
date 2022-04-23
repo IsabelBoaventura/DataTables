@@ -27,7 +27,9 @@
                Cadastrar
             </button>
         </div>
-
+            <!-- Apresentar os alerts de sucesso  -->
+            <span id="msgAlerta"></span>
+            <!-- Fim dos alerts-->
         
     
        
@@ -66,6 +68,10 @@
 
 
             <!---------  A partir daqui form cadastro cargo  ---------->
+    <!-- Apresentar os alerts de erro -->
+    <span id="msgAlertErroCad"></span>
+    <!-- Fim dos alerts--> 
+
 
                 
     <form method="POST" id="form-cad-cargo" >
