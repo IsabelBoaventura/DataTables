@@ -127,9 +127,7 @@ Documentação do Bootstrap - como começar:
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-Documentação da janela Modal 
-
-    https://getbootstrap.com/docs/5.1/components/modal/
+Documentação da janela Modal  https://getbootstrap.com/docs/5.1/components/modal/
 
 
 Botão para abrir a janela Modal
@@ -140,18 +138,15 @@ Botão para abrir a janela Modal
     </button>
 
 
-Renomeando o Nome do Botao de Cadastro
-
-    data-bs-target="#cadCargoModal"
+Renomeando o Nome do Botao de Cadastro ===>    data-bs-target="#cadCargoModal"
 
 Adicionada a parte HTML  para o modal. Dentro do arquivo `ìndex.php`;
 Eliminado os botões pre existente no Modal ;
 
-Adicionado `form` ao modal 
+Adicionado `form` ao modal  ( Horizontal  Form ) 
     https://getbootstrap.com/docs/5.1/forms/layout/
 
-    Horizontal Form
-    
+      
 Encaminhando as informções do formulario para o JavaScript; 
 Parando o evento do `submit`
     
