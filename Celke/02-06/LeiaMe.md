@@ -166,6 +166,10 @@ Recebendo a resposta do arquivo php  e apresentando no console
 ![image](https://user-images.githubusercontent.com/1613816/164946009-bbbe4d03-60b5-4202-aeb1-9cb1ab8ca1b9.png)
 
 
+Verificar se os campos estão preenchidos e cadastrar no banco de dados;
+
+
+
 
         
     
