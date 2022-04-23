@@ -168,11 +168,43 @@ Recebendo a resposta do arquivo php  e apresentando no console
 
 Verificar se os campos estão preenchidos e cadastrar no banco de dados;
 
+Apresentar a mensagem de sucesso ou erro do Cadastro no banco de Dados, dentro da tela Modal.
 
+Fazer a verificação no javascript de qual resposta será apresentada;
 
+Apresentando as respostas na tela Modal 
 
-        
+![image](https://user-images.githubusercontent.com/1613816/164947383-00011eae-ddeb-4c13-87f9-242da9c148ea.png)
+
+Limpando os campos da tela modal após o cadastro. 
+
+    formNewCargo.reset();
+
+Fechando a tela modal após uso.
+
+Celke usou assim
+
+    Declarando: const fecharModalCad = new bootstrap.Modal(document.getElementById("cadCargoModal"));
+    Quando status é true: fecharModalCad.hide();
     
+ Mas o navegador que estou usando para os testes  ( chrome ) acusou erro por causa do `bootstrap`, fechou a tela,  mas não salvou os dados no banco. 
+ 
+ Achei na internet para usar desta forma: 
     
+         $('#cadCargoModal').modal('hide');
+Coloquei apenas assim  no resposta positiva,  salvou no banco  e fecou a tela. 
 
 
+Atualizar automaticamente a DataTables
+    
+     listarDataTables = $('#listar-cargos').DataTable();
+     listarDataTables.draw();
+     
+Adicionado após o Ocultar tela Modal e atualizou os registros corretamente no banco  e na tela . 
+
+Desta forma, atualiza mas fica aparecendo um alert na tela.
+Se retiro a linha do Draw não atualiza
+
+Setei o Draw em 1  ===>     listarDataTables.draw(1);
+
+DEU CERTO!!
