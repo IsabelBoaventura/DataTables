@@ -144,14 +144,36 @@ Renomeando o Nome do Botao de Cadastro
 
     data-bs-target="#cadCargoModal"
 
-Adicionada a parte HTML  para o modal;
+Adicionada a parte HTML  para o modal. Dentro do arquivo `ìndex.php`;
 Eliminado os botões pre existente no Modal ;
 
 Adicionado `form` ao modal 
     https://getbootstrap.com/docs/5.1/forms/layout/
 
     Horizontal Form
+    
+Encaminhando as informções do formulario para o JavaScript; 
+Parando o evento do `submit`
+    
+    formNewCargo.addEventListener("submit", async(e) => {
+        e.preventDefault();
+        
+Usando `async` e `await` para que os processos esperem o anterior finalizar, para que ele seja realizado.
 
-Adicionando o `Alert`
+Encaminhando os dados pelo javascrip para o arquivo em php  `cadastrar.php`
+
+
+Adicionando o `Alert` nas respostas do arquivo php
     https://getbootstrap.com/docs/5.1/components/alerts/
+
+Recebendo a resposta do arquivo php  e apresentando no console
+
+![image](https://user-images.githubusercontent.com/1613816/164946009-bbbe4d03-60b5-4202-aeb1-9cb1ab8ca1b9.png)
+
+
+
+        
+    
+    
+
 
