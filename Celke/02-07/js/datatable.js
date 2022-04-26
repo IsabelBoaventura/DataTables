@@ -77,5 +77,16 @@ async function  visCargo( id ){
     const dados = await fetch('visualizar.php?id=' + id );
 
     const resposta = await dados.json();
-    console.log(resposta);
+    //console.log(resposta);
+
+    if( resposta['status'] ){
+
+        const visModal = new bootstrap.Modal(document.getElementById("visualCargoModal"));
+        visModal.show();
+
+        //const fecharModalCad = new bootstrap.Modal(document.getElementById("cadCargoModal"));
+
+    }else{
+        document.getElementById("msgAlerta").innerHTML = resposta['msg'];
+    }
 }
