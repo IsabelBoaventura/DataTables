@@ -11,10 +11,19 @@ if(!empty($id)){
     $resultado = $conn->prepare($sql_select);
     $resultado->bindParam(':id', $id);
 
-    $retorna = [
-        'status' => true,
-        'msg' =>"<div class='alert alert-success' role='alert'>tudo certo</div>"
-    ];
+    if( ($resultado) and ($resultado->rowCount() != 0) ){
+        $rowCargo = $resultado->fetch(PDO::FETCH_ASSOC);
+        $retorna = [
+            'status' => true,
+            'dados' => $rowCargo 
+        ];
+
+    }else{
+        $retorna = [
+            'status' => false,
+            'msg' =>"<div class='alert alert-danger' role='alert'>Erro: Nenhum Cargo Encontrado!</div>"
+        ];
+    }
 
 }else{
     $retorna = [
