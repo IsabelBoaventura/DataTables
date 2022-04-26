@@ -166,4 +166,9 @@ Adicionando o `Alert`
 https://www.youtube.com/watch?v=DIXctN0rWvQ&list=PLmY5AEiqDWwDnscmb2C9fdQ5EqkkoiWMS&index=8
 
 
+Bootstrap ->  typography -> Description list alignment
+
+    https://getbootstrap.com/docs/5.1/content/typography/
+
+
 
