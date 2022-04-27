@@ -77,16 +77,24 @@ async function  visCargo( id ){
     const dados = await fetch('visualizar.php?id=' + id );
 
     const resposta = await dados.json();
-    //console.log(resposta);
-
-    if( resposta['status'] ){
-
-        const visModal = new bootstrap.Modal(document.getElementById("visualCargoModal"));
+    //
+    console.log(resposta);
+    if( resposta['status']){
+        //console.log( 'resposta true ');
+        const visModal = new bootstrap.Modal(document.getElementById("visCargoModal"));
         visModal.show();
 
-        //const fecharModalCad = new bootstrap.Modal(document.getElementById("cadCargoModal"));
+        document.getElementById("idCargoVis").innerHTML     =  resposta['dados'].id;
+        document.getElementById("cargoVis").innerHTML       =  resposta['dados'].cargo;
+        document.getElementById("nomeVis").innerHTML        =  resposta['dados'].nome;
+        document.getElementById("escritorioVis").innerHTML  =  resposta['dados'].escritorio;
+        document.getElementById("idadeVis").innerHTML       =  resposta['dados'].idade;
+        document.getElementById("salarioVis").innerHTML     =  resposta['dados'].salario;
+        document.getElementById("admissaoVis").innerHTML    =  resposta['dados'].admissao;
 
+        document.getElementById("msgAlerta").innerHTML      =  "";
     }else{
-        document.getElementById("msgAlerta").innerHTML = resposta['msg'];
+       // console.log('resposta false ');
+       document.getElementById("msgAlerta").innerHTML = resposta['msg'];
     }
 }
