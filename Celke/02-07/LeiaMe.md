@@ -169,6 +169,14 @@ https://www.youtube.com/watch?v=DIXctN0rWvQ&list=PLmY5AEiqDWwDnscmb2C9fdQ5Eqkkoi
 Bootstrap ->  typography -> Description list alignment
 
     https://getbootstrap.com/docs/5.1/content/typography/
+    
+    
+
+![image](https://user-images.githubusercontent.com/1613816/165417200-1919d9b8-705c-4a3f-a755-0cf97c1bcbef.png)
+
+    
+    
+Finalizado e concluido!
 
 
 
