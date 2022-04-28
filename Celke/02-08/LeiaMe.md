@@ -155,11 +155,6 @@ Adicionado `form` ao modal
 Adicionando o `Alert`
     https://getbootstrap.com/docs/5.1/components/alerts/
 
-.
-.
-.
-
-
 
 ### Video  07: Como Criar a janela modal para visualizar detalhes do registro no DataTables
 
@@ -172,8 +167,15 @@ https://www.youtube.com/watch?v=DIXctN0rWvQ&list=PLmY5AEiqDWwDnscmb2C9fdQ5Eqkkoi
     https://www.youtube.com/watch?v=Kx3tGxSePMs
 
 
-estou em  16 minutos de video 
+Esta parte é do arquivo referente ao video  08 - Editar os registros do DataTable com o Bootstrap , apesar de ter ocorrido varios erros na geração do arquivo, não documentei em separado como os resolvi.  Enquanto estava testando para corrigir fui adicionando o que estava dando certo e como era o original. 
 
+Botão de Editar abre nova janela
+
+![image](https://user-images.githubusercontent.com/1613816/165660006-76543780-0004-4676-9e27-944c149638b9.png)
+
+Pode se editar as informações existentes nos campos e são salvas. Ao clicar em Salvar a tela modal fecha. E as informações são salvas no banco.
+
+O botao de Deletar será imprementado no video 09 - e o imprimir Caso o Celke nao faça em videos aulas irei testar a impressao.
 
 
 
