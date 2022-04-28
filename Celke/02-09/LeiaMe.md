@@ -205,7 +205,7 @@ Modificamos o 'Cadastrar' e o 'listar' para apresentar apenas os que estao com a
 Proximas tarefas ( independente do CELKE fazer ou nao , tentar implementar)
 - Imprimir em PDF 
 - Imprimir em EXCEL
-    - GRAFICO  com DATATABLES
-    - pesquisa avançada 
-    - separacao por letra do alfabeto
+- GRAFICO  com DATATABLES
+- pesquisa avançada 
+- separacao por letra do alfabeto
 
