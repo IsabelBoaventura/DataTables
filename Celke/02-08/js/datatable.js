@@ -60,9 +60,6 @@ if( formNewCargo ){
         }else{
             document.getElementById("msgAlertErroCad").innerHTML = resposta['msg'];
         }
-
-
-
     });
 
 }
@@ -100,23 +97,33 @@ async function  visCargo( id ){
 
 
 // funcao  Editar cadastro  
-//
-const editModal = new bootstrap.Modal(document.getElementById("editCargoModal"));
+// const editModal = new bootstrap.Modal(document.getElementById("editCargoModal"));
+// é aqui que o Celke adicionou o chamado do bootstrap.Modal 
+//mas se eu deixar desta forma ira me apresentar o seguinte erro:
+//  datatable.js:104 Uncaught ReferenceError: bootstrap is not defined
+//  at datatable.js:104:19
+
+//const editModal = new bootstrap.Modal('#editCargoModal');
 async function editarCargo( id ){
-   // console.log(' dentro do editar ' + id );
+   //  console.log(' dentro do editar ' + id );
    //
    const dados = await fetch('visualizar.php?id=' + id); 
-
    const resposta = await dados.json();
+    // console.log( resposta );
 
    if(resposta['status']){
-        document.getElementById("msgAlertErroEdit").innerHTML = "";
+        document.getElementById("msgAlertErroEdit").innerHTML = "" 
 
         document.getElementById("msgAlerta").innerHTML = "";
 
         //  
-        const editModal = new bootstrap.Modal(document.getElementById("editCargoModal"));
+       // 
+       const editModal = new bootstrap.Modal(document.getElementById("editCargoModal"));
+        // 
         editModal.show();
+
+        // colocando a constante aqui dentro - esta abrindo a janela Modal
+        // Nao sei se esta salvando as demais informações
 
         document.getElementById("idEdit").value = resposta['dados'].id;
         document.getElementById("cargoEdit").value = resposta['dados'].cargo;
@@ -135,19 +142,28 @@ async function editarCargo( id ){
 
 
 
-// esta parte eu nao sei onde se encaixa ainda 
+// esta parte eh para depois que abriu a tela Modal de Edição , 
+// visualizaou  e editou as informações 
 const formEditCargo = document.getElementById("form-edit-cargo");
 if( formEditCargo ){
     formEditCargo.addEventListener("submit", async(e) =>{
         e.preventDefault();
         const dadosForm = new FormData( formEditCargo);
 
+        // console.log(' dados do dadosForm');
+        // console.log(dadosForm);
+
         const dados = await fetch("editar.php", {
             method: "POST",
             body: dadosForm
         });
 
+       
+
         const resposta = await dados.json();
+
+        // console.log(' Dados do retorno do editar transformado em resposta  ');
+        // console.log( resposta  );
 
         if( resposta['status']){
 
@@ -157,7 +173,11 @@ if( formEditCargo ){
 
             // limpar o formulario 
             formEditCargo.reset();
-            editModal.hide();
+              
+            // PARA ocultar a janela modal 
+            //const editModal = new bootstrap.Modal(document.getElementById("editCargoModal"));
+            $('#editCargoModal').modal('hide');
+            //editModal.hide();
 
 
             // Atualizar a lista de registros 
@@ -167,6 +187,8 @@ if( formEditCargo ){
         }else{
             document.getElementById("msgAlertErroEdit").innerHTML = resposta['msg'];
         }
+        // innerHTML pois a resposta tem couteudo  HTML 
+        // value pois é apenas a informação sem conteudo HTML 
     });
 }
 

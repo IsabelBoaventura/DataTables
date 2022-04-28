@@ -4,7 +4,7 @@
 include_once 'conexao/conectarpdo.php';
 
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-
+//$id = 100 ;
 if(!empty($id)){
 
     $sql_select = "SELECT * FROM cargo WHERE id= :id LIMIT 1";
