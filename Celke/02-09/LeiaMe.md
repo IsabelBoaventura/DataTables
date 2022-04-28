@@ -188,4 +188,24 @@ estou em  16 minutos de video
 Vamos alterar o banco de dados 
 
     ALTER TABLE cargo ADD situacao VARCHAR(1) NOT NULL DEFAULT 'A';
+    
+Criamos o arquivo em separado  `apagar.php`  ele altera a sitaucao de 'A' ATIVO  para 'E' excluido.
+
+**![image](https://user-images.githubusercontent.com/1613816/165668570-c7592634-2922-4c97-a6ef-853bb96b8de7.png)
+**
+
+
+Colocamos a confirmação se deseja ou nao deletar o arquivo
+
+![image](https://user-images.githubusercontent.com/1613816/165668652-8d7b13e6-4ef3-485d-957d-56dda0a787e2.png)
+
+
+Modificamos o 'Cadastrar' e o 'listar' para apresentar apenas os que estao com a situacao ativo.
+
+Proximas tarefas ( independente do CELKE fazer ou nao , tentar implementar)
+    - Imprimir em PDF 
+    - Imprimir em EXCEL
+    - GRAFICO  com DATATABLES
+    - pesquisa avançada 
+    - separacao por letra do alfabeto
 
